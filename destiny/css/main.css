@@ -1,0 +1,14 @@
+body {
+  min-width: 480px;
+  background-color: #f8f8f8; }
+
+.content__title {
+  color: #32C8FA; }
+
+.user__link {
+  text-decoration: none;
+  cursor: pointer; }
+
+.user__icon {
+  width: 120px;
+  height: 120px; }
