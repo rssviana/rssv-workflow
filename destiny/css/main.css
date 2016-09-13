@@ -1,8 +1,8 @@
-.user__icon, .app-row__item, .social-row__ico--github, .social-row__ico--linkedin, .social-row__ico--facebook {
+.creator__icon, .app-row__item, .social-row__ico--github, .social-row__ico--linkedin, .social-row__ico--facebook {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
-.user__icon:hover, .app-row__item:hover, .social-row__ico--github:hover, .social-row__ico--linkedin:hover, .social-row__ico--facebook:hover {
+.creator__icon:hover, .app-row__item:hover, .social-row__ico--github:hover, .social-row__ico--linkedin:hover, .social-row__ico--facebook:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1); }
 
@@ -11,7 +11,8 @@
   margin-right: auto; }
 
 .body {
-  font-family: "sans-serif";
+  font-family: sans-serif;
+  color: #292D2E;
   margin: 0;
   width: 100%;
   min-width: 1024px;
@@ -26,16 +27,13 @@
   border: 1px solid #bdbdbd;
   text-align: center; }
 
-.content__title {
-  color: #32C8FA; }
-
-.user__link {
+.creator__link {
   text-decoration: none;
   cursor: pointer; }
 
-.user__icon {
-  width: 250px;
-  height: 250px; }
+.creator__icon {
+  width: 432px;
+  height: 293px; }
 
 .app {
   width: 100%; }
@@ -89,8 +87,7 @@
   padding-left: 0;
   width: 100%;
   background-color: #bdbdbd;
-  color: #000000;
-  margin-top: calc(100% - 100px);
+  margin-top: calc(75% - 100px);
   text-align: center; }
 
 .social-row {
@@ -102,6 +99,10 @@
 .social-row__ico {
   width: 70px;
   height: 70px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 10px; }

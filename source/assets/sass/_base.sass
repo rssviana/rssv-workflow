@@ -1,5 +1,6 @@
 .body
-	+font-family("sans-serif")
+	+font-family( sans-serif )
+	color: $color-graphite
 	margin: 0
 	width: 100%
 	min-width: $break-medium
@@ -15,15 +16,12 @@
 	border: 1px solid #bdbdbd
 	text-align: center
 
-.content__title
-	color: #32C8FA
-
-.user__link
+.creator__link
 	text-decoration: none
 	cursor: pointer
 	
-.user__icon
-	+item-size(250px)
+.creator__icon
+	+item-size( 432px, 293px )
 	@extend %transition
 	&:hover
 		@extend %transform
@@ -73,8 +71,7 @@
 	@extend %centralize
 	width: 100%
 	background-color: $color-gray
-	color: $color-black
-	margin-top: calc(100% - 100px)
+	margin-top: calc(75% - 100px)
 	text-align: center
    
 .social-row
@@ -84,7 +81,8 @@
 	text-decoration: none
 
 .social-row__ico
-	+item-size(70px)
+	+item-size( 70px, 70px )
+	+padding( 10px, 10px, 10px, 10px )
 	cursor: pointer
 	margin-top: 10px
 	margin-bottom: 10px
