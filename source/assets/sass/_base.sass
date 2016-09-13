@@ -1,6 +1,19 @@
-body
-	min-width: 480px
+.body
+	+font-family("sans-serif")
+	margin: 0
+	width: 100%
+	min-width: 720px
 	background-color: #f8f8f8
+
+.header	
+	@extend .centralize
+	margin-top: 60px
+	margin-bottom: 60px
+	width: 60%
+	height: 500px
+	background-color: #ffffff
+	border: 1px solid #bdbdbd
+	text-align: center
 
 .content__title
 	color: #32C8FA
@@ -8,6 +21,49 @@ body
 .user__link
 	text-decoration: none
 	cursor: pointer
+	
 .user__icon
-	width:  120px
-	height: 120px
+	+item-size(250px)
+	@extend .transition
+	&:hover
+		@extend .transform
+.footer
+	+padding(10px, 0, 10px, 0)
+	@extend .centralize
+	background-color: $color-gray
+	color: $color-black
+	width: 100%
+	text-align: center
+.social-row
+	display: block
+
+.social-row__link
+	text-decoration: none
+
+.social-row__ico
+	+item-size(70px)
+	cursor: pointer
+	margin-top: 10px
+	margin-bottom: 10px
+
+.social-row__ico--github
+	@extend .transition
+	&:hover
+		@extend .transform
+	
+.social-row__ico--linkedin
+	@extend .transition
+	&:hover
+		@extend .transform
+
+.social-row__ico--facebook
+	@extend .transition
+	&:hover
+		@extend .transform
+.copyright
+	+font-size(16px)
+
+@media (max-width: $break-small)
+  	.header
+  		width: 100%
+  		margin: 0
