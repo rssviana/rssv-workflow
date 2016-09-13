@@ -2,14 +2,14 @@
 	+font-family("sans-serif")
 	margin: 0
 	width: 100%
-	min-width: 720px
+	min-width: $break-medium
 	background-color: #f8f8f8
 
 .header	
-	@extend .centralize
+	@extend %centralize
 	margin-top: 60px
 	margin-bottom: 60px
-	width: 60%
+	width: 80%
 	height: 500px
 	background-color: #ffffff
 	border: 1px solid #bdbdbd
@@ -24,16 +24,59 @@
 	
 .user__icon
 	+item-size(250px)
-	@extend .transition
+	@extend %transition
 	&:hover
-		@extend .transform
+		@extend %transform
+.app
+	width: 100%
+	//text-align: center
+	//display: block
+
+.app-row
+	width: 80%
+	max-width: 810px
+	@extend %centralize
+
+.app-row__item
+	+image-size__cicle( 200px, 200px )
+	+margin( 50px, 30px, 50px, 30px )
+	@extend %centralize
+	@extend %transition
+	border: 1px solid $color-gray
+	position: relative
+	float: left
+	cursor: pointer
+	&:hover
+		@extend %transform
+
+
+.app-row__item--goku
+	+background-image('/../source/assets/images/dg-icons/goku-icon.png')
+
+.app-row__item--vegeta
+	+background-image('/../source/assets/images/dg-icons/vegeta-icon.png')
+
+.app-row__item--piccolo
+	+background-image('/../source/assets/images/dg-icons/piccolo-icon.png')
+
+.app-row__item--gohan
+	+background-image('/../source/assets/images/dg-icons/gohan-icon.png')
+
+.app-row__item--trunks
+	+background-image('/../source/assets/images/dg-icons/trunks-icon.png')
+
+.app-row__item--pan
+	+background-image('/../source/assets/images/dg-icons/pan-icon.png')
+
 .footer
 	+padding(10px, 0, 10px, 0)
-	@extend .centralize
+	@extend %centralize
+	width: 100%
 	background-color: $color-gray
 	color: $color-black
-	width: 100%
+	margin-top: calc(100% - 100px)
 	text-align: center
+   
 .social-row
 	display: block
 
@@ -47,23 +90,29 @@
 	margin-bottom: 10px
 
 .social-row__ico--github
-	@extend .transition
+	@extend %transition
 	&:hover
-		@extend .transform
+		@extend %transform
 	
 .social-row__ico--linkedin
-	@extend .transition
+	@extend %transition
 	&:hover
-		@extend .transform
+		@extend %transform
 
 .social-row__ico--facebook
-	@extend .transition
+	@extend %transition
 	&:hover
-		@extend .transform
-.copyright
+		@extend %transform
+.footer__copyright
 	+font-size(16px)
 
-@media (max-width: $break-small)
+@media (max-width: $break-medium)
   	.header
   		width: 100%
   		margin: 0
+
+  	.app-row
+  		width: 80%
+  		margin-left: auto
+  		margin-right: auto
+

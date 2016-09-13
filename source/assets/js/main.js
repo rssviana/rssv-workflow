@@ -1,4 +1,8 @@
-(function () {
-	console.log('Insert code inside this autovocative function');
-})();
+let name
+
+let popup = (name) => { 
+	
+	return	confirm("Yes, " + name + " is the best ! ") 
+}
+
 

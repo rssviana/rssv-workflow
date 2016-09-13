@@ -1,15 +1,34 @@
-=item-size($size-ico)
+=item-size( $size-ico )
 	width:  	$size-ico
 	height: 	$size-ico
 
-=font-size($size)
+=font-size( $size )
 	font-size:  $size
 
-=font-family($family)
+=font-family( $family )
 	font-family:  $family
 
-=padding($top, $right, $bottom, $left)
+=padding( $top, $right, $bottom, $left )
 	padding-top:     $top
 	padding-right:   $right
 	padding-bottom:  $bottom
 	padding-left:    $left
+	
+=margin( $top, $right, $bottom, $left )
+	margin-top:     $top
+	margin-right:   $right
+	margin-bottom:  $bottom
+	margin-left:    $left
+
+=image-size__quad( $x, $y )
+	width: $x
+	height: $y
+=image-size__cicle( $x, $y )
+	width: $x
+	height: $y
+	border: 1px solid $color-gray
+	border-radius: 50%
+
+=background-image( $img-path )
+	background: url( $img-path ) no-repeat
+	background-size: cover

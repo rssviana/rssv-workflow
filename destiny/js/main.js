@@ -1,5 +1,8 @@
-'use strict';
+"use strict";
 
-(function () {
-	console.log('Insert code inside this autovocative function');
-})();
+var name = void 0;
+
+var popup = function popup(name) {
+
+	return confirm("Yes, " + name + " is the best ! ");
+};
