@@ -1,19 +1,43 @@
 .body
-	@extend %ta-c
+	background-color: #f8f8f8
 	font-family: sans-serif
 	margin: 0
+	min-width: 380px
 	padding: 0
 
-.content
-	@extend %border
-	@extend %horizontal-cent
-	background-color: #f8f8f8
-	border: 1px solid #ccc
-	width: 480px
-	height: auto
-	margin-top: 50px
-	padding: 15px
+.header
+	background-color: #fff
+	border-bottom: 1px solid #ccc
+	height: 75px
+	width: 100%
 
+.header__logo
+	float: left
+	margin-left: 10px
+
+.header__description
+	float: left
+	margin-left: 25px
+	margin-top: 32px
+
+.header__link
+	color: #1ff2e4
+	text-decoration: none
+	&:hover
+		color: #10b7ac
+
+.content
+	background-color: #fff
+	border: 1px solid #ccc
+	margin: 15px auto 15px auto
+	padding: 10px
+	text-align: center
+	width: 80%
+	@media screen and (max-width: 380px)
+    border: none
+    border-bottom: 1px solid #ccc
+    margin: 0
+    width: 100%
 
 .babidi
-	+image-size__cicle( 120px, 170px )
+	+image-size__cicle( 200px, 230px )

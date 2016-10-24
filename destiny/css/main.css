@@ -1,28 +1,47 @@
-.content {
-  margin-left: auto;
-  margin-right: auto; }
-
-.content {
-  border-radius: 8px; }
-
 .body {
-  text-align: center; }
-
-.body {
+  background-color: #f8f8f8;
   font-family: sans-serif;
   margin: 0;
+  min-width: 380px;
   padding: 0; }
 
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  height: 75px;
+  width: 100%; }
+
+.header__logo {
+  float: left;
+  margin-left: 10px; }
+
+.header__description {
+  float: left;
+  margin-left: 25px;
+  margin-top: 32px; }
+
+.header__link {
+  color: #1ff2e4;
+  text-decoration: none; }
+  .header__link:hover {
+    color: #10b7ac; }
+
 .content {
-  background-color: #f8f8f8;
+  background-color: #fff;
   border: 1px solid #ccc;
-  width: 480px;
-  height: auto;
-  margin-top: 50px;
-  padding: 15px; }
+  margin: 15px auto 15px auto;
+  padding: 10px;
+  text-align: center;
+  width: 80%; }
+  @media screen and (max-width: 380px) {
+    .content {
+      border: none;
+      border-bottom: 1px solid #ccc;
+      margin: 0;
+      width: 100%; } }
 
 .babidi {
-  width: 120px;
-  height: 170px;
+  width: 200px;
+  height: 230px;
   border: 1px solid #bdbdbd;
   border-radius: 50%; }
