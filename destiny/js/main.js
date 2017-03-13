@@ -1,4 +1,2 @@
-"use strict";
-
-console.log("It's working !");
-alert('Welcome to RSSV-Flow');
+"use strict";!function(){console.log("I'm happy to help your with this workflow!")}();!");
+})();

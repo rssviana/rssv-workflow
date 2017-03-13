@@ -1,43 +1,211 @@
-.body
-	background-color: #f8f8f8
-	font-family: sans-serif
+// some combination of colors
+	// #00BCD3, #E81E63
+	// #3F51B5, #F34336
+	// #F34336, #3F51B5
+	// #9c23ff, #f2a710
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700')
+
+%reset
+	box-sizing: border-box
 	margin: 0
-	min-width: 380px
 	padding: 0
 
+html, body
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	height: 100%
+	-webkit-font-smoothing: antialiased
+
 .header
-	background-color: #fff
-	border-bottom: 1px solid #ccc
-	height: 75px
-	width: 100%
+	@extend %reset
+	background: #9c23ff /* For browsers that do not support gradients */
+	background: linear-gradient(to bottom right, #9c23ff, #00BCD3)
+	border-bottom-left-radius: 45px
+	border-bottom-right-radius: 45px
+	height: 500px
+	left: 0
+	right: 0
+	top: 0
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
 
-.header__logo
-	float: left
-	margin-left: 10px
+	&__logo
+		@extend %reset
+		text-align: center
 
-.header__description
-	float: left
-	margin-left: 25px
-	margin-top: 32px
+	&__link
+		@extend %reset
+		text-decoration: none
+		color: #fff
+		font-family: 'Open Sans', sans-serif
+		font-size: 50px
+		font-weight: bold
 
-.header__link
-	color: #1ff2e4
-	text-decoration: none
-	&:hover
-		color: #10b7ac
+	&__description
+		@extend %reset
+		color: #fff
+		display: block
+		font-family: 'Open Sans', sans-serif
+		font-size: 40px
+		margin-bottom: 30px
 
-.content
-	background-color: #fff
-	border: 1px solid #ccc
-	margin: 15px auto 15px auto
-	padding: 10px
+	&__author
+		@extend %reset
+		color: #fff
+		font-family: 'Open Sans', sans-serif
+		font-size: 24px
+
+.menu
+	@extend %reset
+	margin: 0 auto
+
+	&__list
+		@extend %reset
+		display: flex
+		justify-content: center
+
+	&__item
+		@extend %reset
+		list-style: none
+		margin: 0 15px
+
+	&__link
+		@extend %reset
+		border-bottom: 2px solid transparent
+		color: #fff
+		font-family: 'Open Sans', sans-serif
+		font-size: 18px
+		padding-bottom: 4px
+		text-decoration: none
+		transition: all 0.5s ease-out
+
+		&:hover
+			border-bottom: 2px solid #fff
+
+.section
+	@extend %reset
+	margin: 45px 10%
+	padding: 40px 0
+	border-bottom: 2px solid #aaa
+
+	&__title
+		@extend %reset
+		color: #431d82
+		font-family: 'Open Sans', sans-serif
+		font-size: 32px
+		margin-bottom: 30px
+
+	&__lead
+		@extend %reset
+		color: #431d82
+		font-family: 'Open Sans', sans-serif
+		font-weight: bold
+		font-size: 22px
+		margin-bottom: 30px
+
+		&--red
+			color: #ff2b2b
+
+
+	&__paragraph
+		@extend %reset
+		color: #303030
+		font-family: 'Open Sans', sans-serif
+		font-size: 15px
+		line-height: 20px
+
+	&__list
+		@extend %reset
+		display: block
+		margin: 15px 0
+
+	&__item
+		@extend %reset
+		color: #303030
+		font-family: 'Open Sans', sans-serif
+		font-size: 15px
+		list-style: none
+		margin-bottom: 8px
+
+		&--star
+			@extend %reset
+			&:before
+				content: "\2605"
+				margin: 0 12px
+
+		&--arrow
+			@extend %reset
+			&:before
+				content: "\27A2"
+				margin: 0 12px
+
+	&__link
+		@extend %reset
+		border-bottom: 2px solid transparent
+		color: #00BCD3
+		font-family: 'Open Sans', sans-serif
+		font-size: 15px
+		line-height: 20px
+		text-decoration: none
+		transition: all 0.5s ease-out
+
+		&:hover
+			border-bottom: 2px solid #00BCD3
+
+.footer
+	@extend %reset
+	background: #00BCD3 /* For browsers that do not support gradients */
+	border-top-left-radius: 45px
+	border-top-right-radius: 45px
 	text-align: center
-	width: 80%
-	@media screen and (max-width: 380px)
-    border: none
-    border-bottom: 1px solid #ccc
-    margin: 0
-    width: 100%
 
-.babidi
-	+image-size__cicle( 200px, 230px )
+	&__author
+		@extend %reset
+		font-family: 'Open Sans', sans-serif
+		font-size: 14px
+		color: #fff
+		line-height: 50px
+
+.doc-section
+	@extend %reset
+	@extend .section
+	background: #3F51B5 /* For browsers that do not support gradients */
+	background: linear-gradient(to bottom right, #F34336, #3F51B5)
+	border-radius: 45px
+	margin: 120px 5%
+
+	&__title
+		@extend %reset
+		color: #fff
+		font-family: 'Open Sans', sans-serif
+		font-size: 32px
+		font-weight: bold
+		text-align: center
+
+	&__paragraph
+		color: #fff
+		font-family: 'Open Sans', sans-serif
+		font-size: 16px
+		text-align: center
+
+
+.code
+	@extend %reset
+	background-color: #6d6b6b
+	border-radius: 4px
+	box-shadow: 0px 0px 14px 1px rgba(109,107,107,.7)
+	margin: 30px 0
+	padding: 8px 0
+
+	&__line
+		@extend %reset
+		color: #40d600
+		font-family: 'Open Sans', sans-serif
+		font-size: 16px
+		font-weight: bold
+		margin-left: 18px
+
