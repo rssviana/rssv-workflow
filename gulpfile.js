@@ -1,4 +1,5 @@
 const gulp     = require('gulp');
+const clean    = require('gulp-clean');
 const rename   = require('gulp-rename');
 const pump     = require('pump')
 const sass     = require('gulp-sass');
@@ -24,37 +25,42 @@ gulp.task('htmlmin', function(){
 });
 
 gulp.task('cssmin', function () {
-    return gulp.src('destiny/css/*.css')
-        .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('destiny/css'));
+  return gulp.src('destiny/css/*.{css, min.css}')
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('destiny/css'));
 });
 
 gulp.task('compress', function (cb) {
   pump([
-        gulp.src('destiny/js/*.js'),
-        uglify(),
-        gulp.dest('destiny/js')
-    ],
-    cb
+    gulp.src('destiny/js/*.js'),
+    uglify(),
+    gulp.dest('destiny/js')
+  ],
+  cb
   );
 });
 
 gulp.task('styles', function() {
 	return gulp.src('source/sass/main.sass')
-		.pipe(sass())
-		.pipe(prefix())
-		.pipe(gulp.dest('destiny/css'))
-		.pipe(browserSync.reload({stream: true}));
+	.pipe(sass())
+	.pipe(prefix())
+	.pipe(gulp.dest('destiny/css'))
+	.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('es6', function(){
-    return gulp.src('source/js/main.js')
-		.pipe(babel({
-    		presets: ['es2015']
-		}))
-		.pipe(gulp.dest('destiny/js'))
-		.pipe(browserSync.reload({stream: true}));
+  return gulp.src('source/js/main.js')
+	.pipe(babel({
+  		presets: ['es2015']
+	}))
+	.pipe(gulp.dest('destiny/js'))
+	.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('clean-mincss', function() {
+	return gulp.src('destiny/css/*.min.css', {read: false})
+	.pipe(clean());
 });
 
 gulp.task('serve', function() {
